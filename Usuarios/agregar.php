@@ -38,7 +38,7 @@
     ?>
 
     <div class="container">
-        <h1 class="text-center" >Agregar nuevo usuario</h1>
+        <h1 class="text-center mt-5" >Agregar nuevo usuario</h1>
         <form method="POST" enctype="multipart/form-data" >
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombres</label>
@@ -75,7 +75,7 @@
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
     </div>
 

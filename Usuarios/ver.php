@@ -26,7 +26,7 @@
         include('../menu.php');
     ?>
     <div class="container">
-        <h1 class="text-center" >Todos los usuarios</h1>
+        <h1 class="text-center mt-5" >Todos los usuarios</h1>
 
         <table class="table">
             <thead>
