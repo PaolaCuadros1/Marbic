@@ -38,11 +38,11 @@
     ?>
 
     <div class="container">
-        <h1 class="text-center mt-5" >Agregar nuevo usuario</h1>
+        <h1 class="text-center mt-5 titulo_principal" >Agregar nuevo usuario</h1>
         <form method="POST" enctype="multipart/form-data" >
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" require="true">
             </div>
 
             <div class="mb-3">
@@ -52,13 +52,12 @@
 
             <div class="mb-3">
                 <label for="correo_electronico" class="form-label">Correo electronico</label>
-                <input type="text" class="form-control" id="correo_electronico" name="correo_electronico"
-                    aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="correo_electronico" name="correo_electronico" require="true">
             </div>
 
             <div class="mb-3">
                 <label for="contrasena" class="form-label">Contraseña</label>
-                <input type="text" class="form-control" id="contrasena" name="contrasena" aria-describedby="emailHelp">
+                <input type="password" class="form-control" id="contrasena" name="contrasena" aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
