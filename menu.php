@@ -45,6 +45,20 @@
                         <li><a class="dropdown-item" href="<?= ROOT ?>/salones/ver.php">Ver salones</a></li>
                     </ul>
                 </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="clubes" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Clubes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="clubes">
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/Profesores/agregar.php">Registro</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/Profesores/ver.php">Ver clubes</a></li>
+                    </ul>
+                </li>
+
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="salones" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
