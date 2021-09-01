@@ -1,12 +1,12 @@
 <?php
-include_once('../clubes/ver.php');
 include_once('clubes.php');
+include_once('../Config/config.php');
 if ( isset($_POST) && !empty($_POST) ){
     $nuevo_clubes = new clubes(); 
     $nuevo_clubes->crear_clubes($_POST);
 
     if ($nuevo_clubes){
-        echo "Muy bien, usuario guardado";
+        echo "Muy bien, clube guardado";
     }
  }
 
@@ -34,8 +34,8 @@ if ( isset($_POST) && !empty($_POST) ){
 
         <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="nombre" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp">
+                <label for="nombre_del_club" class="form-label">nombre_del_club</label>
+                <input type="text" class="form-control" id="nombre_del_club" name="nombre_del _club" aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">

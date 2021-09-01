@@ -9,10 +9,8 @@ class clubes{
 
 
 
-
-
- function crear_Usuario($datos_clubes){ 
-     $nombre= $datos_clubes['nombre'];
+     function crear_clubes($datos_clubes){ 
+     $nombre_del_club= $datos_clubes['nombre_del_club'];
      $apellido = $datos_clubes['apellido'];
      $correo_electronico = $datos_clubes['correo_electronico'];
      $contrasena = $datos_clubes['contrasena'];
@@ -20,7 +18,7 @@ class clubes{
      $celular=$datos_clubes['celular'];
 
 $guardar_datos="INSERT INTO clubes 
-VALUES(NULL,'$nombre' , '$apellido' , '$correo_electronico' , '$contrasena' , $celular , '$rol' ) ";
+VALUES(NULL,'$nombre_del_club ' , '$apellido' , '$correo_electronico' , '$contrasena' , $celular , '$rol' ) ";
 
 return mysqli_query($this->conn, $guardar_datos);
 
@@ -38,4 +36,4 @@ return mysqli_query($this->conn, $guardar_datos);
        
 }
  
-?>
+?>   

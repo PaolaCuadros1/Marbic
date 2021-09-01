@@ -31,7 +31,7 @@ $todos_los_clubes = $clubes->ver_clubes();
         <thead>
             <tr>
                 <th>ID</th>
-                <th>NOMBRE</th>
+                <th>nombre_del_club</th>
                 <th>APELLIDO</th>
                 <th>EDAD</th>
                 <th>CORREO_ELECTRONICO</th>
@@ -45,7 +45,7 @@ $todos_los_clubes = $clubes->ver_clubes();
            while ( $info_usuario = mysqli_fetch_object($todos_los_clubes) ){
             echo "<tr>";
             echo "<td> $info_clubes->id </td>";
-            echo "<td> $info_clubes->nombre </td>";
+            echo "<td> $info_clubes->nombre_del_club </td>";
             echo "<td> $info_clubes->apellido </td>";
             echo "<td> $info_clubes->edad </td>";
             echo "<td> $info_clubes->Correo_electronico </td>";

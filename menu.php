@@ -53,8 +53,8 @@
                         Clubes
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="clubes">
-                        <li><a class="dropdown-item" href="<?= ROOT ?>/Profesores/agregar.php">Registro</a></li>
-                        <li><a class="dropdown-item" href="<?= ROOT ?>/Profesores/ver.php">Ver clubes</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/clubes/agregar.php">Registro</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/clubes/ver.php">Ver clubes</a></li>
                     </ul>
                 </li>
 

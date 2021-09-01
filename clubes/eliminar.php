@@ -1,7 +1,7 @@
 <?php
 
 include_once('../Config/config.php');
-include_once('clubes.php');// Llamamos al archivo Usuario.php
+include_once('clubes.php');// Llamamos al archivo clubes.php
 
 $clubes = new clubes ();
 
@@ -10,7 +10,7 @@ $clubes = new clubes ();
  * Si se elimina, entonces recargamos la pagina.
  * Si NO se elimina, entonces mostrar un error.
  */
-if ( $clubes->eliminar_usuario( $_GET['id'] ) ){
+if ( $clubes->eliminar_clubes( $_GET['id'] ) ){
  header( 'Location: ' . ROOT . '/clubes/ver.php');
 }else{
     echo '<div>Error</div>';
