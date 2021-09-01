@@ -34,4 +34,9 @@ function ver_salones(){
     return mysqli_query($this->conn, $ver_salones);
 }
 
+function eliminar_elemento($id){
+    $eliminar_elemento = " DELETE FROM salones WHERE id = $id  ";
+    return mysqli_query($this->conn, $eliminar_elemento);
+}
+
 }
