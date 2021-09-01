@@ -46,18 +46,18 @@ include('../menu.php');
             <tbody>
                 <?php
           while ($info_salones = mysqli_fetch_object($todos_los_salones) ) {
-            echo "<tr";  
-            echo "<tr $info_salones->id </tr>"; 
-            echo "<tr $info_salones->nombre_del_salon </tr>"; 
-            echo "<tr $info_salones->numero_sillas </tr>"; 
-            echo "<tr $info_salones->numero_mesas</tr>"; 
-            echo "<tr $info_salones->numero_mesas_grande </tr>"; 
-            echo "<tr $info_salones->numero_televisor </tr>"; 
-            echo "<tr $info_salones->numero_puerta_corrediza </tr>"; 
-            echo "<tr $info_salones->numero_microscopio </tr>"; 
-            echo "<tr $info_salones->numero_antibactarial </tr>"; 
-            echo "<tr $info_salones->numero_toallas </tr>"; 
-            echo "<tr $info_salones->numero_balones</tr>"; 
+            echo "<tr>";  
+            echo "<td> $info_salones->id </td>"; 
+            echo "<td> $info_salones->nombre </td>"; 
+            echo "<td> $info_salones->numero_sillas </td>"; 
+            echo "<td> $info_salones->numero_mesas</td>"; 
+            echo "<td> $info_salones->numera_mesa_grande </td>"; 
+            echo "<td> $info_salones->numero_televisores </td>"; 
+            echo "<td> $info_salones->numero_puerta_corrediza </td>"; 
+            echo "<td> $info_salones->numero_microscopio </td>"; 
+            echo "<td> $info_salones->numero_antibacterial </td>"; 
+            echo "<td> $info_salones->numero_toallas </td>"; 
+            echo "<td> $info_salones->numero_balones</td>"; 
             echo "<td><a href='".ROOT."/salones/eliminar.php?id=".$info_salones->id."' class=' btn btn-danger' > X </a>    </td>";
 
                     echo "</tr>";

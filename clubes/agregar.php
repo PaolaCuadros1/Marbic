@@ -1,13 +1,14 @@
 <?php
 include_once('clubes.php');
 include_once('../Config/config.php');
-$seGuardo == false;
+$seGuardo = false;
+
 if ( isset($_POST) && !empty($_POST) ){
     $nuevo_clubes = new clubes(); 
     $nuevo_clubes->crear_clubes($_POST);
 
     if ($nuevo_clubes){
-        $seGuardo == true;
+        $seGuardo = true;
     }
  }
 

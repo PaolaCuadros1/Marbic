@@ -3,13 +3,13 @@
 
     include_once('../Config/config.php');
     include_once('comentario.php');
-    $seGuardo == false;
+    $seGuardo = false;
     if ( isset($_POST) && !empty($_POST) ){
         $nuevo_comentario = new Comentario(); 
         $nuevo_comentario->crear_comentario($_POST);
  
         if ($nuevo_comentario){
-            $seGuardo == true;
+            $seGuardo = true;
         }
      }
 ?>

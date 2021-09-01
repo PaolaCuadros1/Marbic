@@ -2,13 +2,13 @@
 
 include_once('../Config/config.php');
 include_once('profesores.php');
-$seGuardo == false;
+$seGuardo = false;
 if ( isset($_POST) && !empty($_POST) ){
     $nuevo_profesor = new profesores(); 
     $nuevo_profesor->crear_profesor($_POST);
 
 if ($nuevo_profesor){
-    $seGuardo == true;
+    $seGuardo = true;
     }
  }
 

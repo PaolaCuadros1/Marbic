@@ -3,13 +3,13 @@
 include_once('../Config/config.php');
 include_once('materias.php');
 
-$seGuardo == false;
+$seGuardo = false;
 if ( isset($_POST) && !empty($_POST) ){
     $nuevas_materias = new materias(); 
     $nuevas_materias->crear_materias($_POST);
 
 if ($nuevas_materias){
-    $seGuardo == true;
+    $seGuardo = true;
     }
  }
 
@@ -41,16 +41,16 @@ if ($nuevas_materias){
             <div class="mb-3">
                 <select class="form-select" aria-label="Default select example" id="Materia" name="Materia">
                     <option selected>Seleccione una Materia</option>
-                    <option value="Administrativo">Direcciòn de curso</option>
-                    <option value="Profesor">Ética</option>
-                    <option value="Estudiante">Matemàticas</option>
-                    <option value="Estudiante">Ciencias naturales</option>
-                    <option value="Estudiante">Ciencias sociales</option>
-                    <option value="Estudiante">Artes</option>
-                    <option value="Estudiante">Ingles</option>
-                    <option value="Estudiante">Español</option>
-                    <option value="Estudiante">Educaciòn fìsica</option>
-                    <option value="Estudiante">Tecnologìa</option>
+                    <option value="Direcciòn de curso">Direcciòn de curso</option>
+                    <option value="Ética">Ética</option>
+                    <option value="Matemàticas">Matemàticas</option>
+                    <option value="Ciencias naturales">Ciencias naturales</option>
+                    <option value="Ciencias sociales">Ciencias sociales</option>
+                    <option value="Artes">Artes</option>
+                    <option value="Ingles">Ingles</option>
+                    <option value="Español">Español</option>
+                    <option value="Educaciòn fìsica">Educaciòn fìsica</option>
+                    <option value="Tecnologìa">Tecnologìa</option>
                 </select>
             </div>
 
