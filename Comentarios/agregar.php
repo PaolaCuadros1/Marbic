@@ -3,13 +3,13 @@
 
     include_once('../Config/config.php');
     include_once('comentario.php');
-
+    $seGuardo == false;
     if ( isset($_POST) && !empty($_POST) ){
         $nuevo_comentario = new Comentario(); 
         $nuevo_comentario->crear_comentario($_POST);
  
         if ($nuevo_comentario){
-            echo "Muy bien, comentario guardado";
+            $seGuardo == true;
         }
      }
 ?>
@@ -30,6 +30,9 @@
 <body>
     <?php
          include('../menu.php');
+         if ( $seGuardo == true ){
+            echo "Muy bien, comentario guardado";
+           }
     ?>
     <div class="container">
     <h1 class="text-center mt-5">Agregar nuevo comentario</h1>

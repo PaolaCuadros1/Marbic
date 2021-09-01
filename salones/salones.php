@@ -24,7 +24,7 @@ function crear_elemento($datos_salones){
     $numero_balones = $datos_salones['numero_balones'];
     
 $guardar_datos = " INSERT INTO  salones ( NULL, '$nombre', $numero_sillas, $numero_mesas, $numero_mesas_grande, $numero_televisor, $numero_puerta_corrediza, $numero_microscopio, $numero_antibacterial, $numero_alcohol , $numero_toallas, $numero_balones)";
-echo $guardar_datos;
+
 return mysqli_query($this->conn, $guardar_datos);
 
 

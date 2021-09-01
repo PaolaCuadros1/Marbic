@@ -19,8 +19,8 @@ $lugar_de_nacimiento = $datos_profesores ['lugar_de_nacimiento'];
 $foto_perfil = $datos_profesores ['foto_perfil'];
 
 
-$guardar_datos = " INSERT INTO profesores VALUES ( NULL, '$nombre', '$apellido', '$correo_electronico', $telefono, '$edad', '$fecha_de_nacimiento', '$lugar_de_nacimiento', '$foto_perfil' )";
-echo $guardar_datos;
+$guardar_datos = " INSERT INTO profesores VALUES ( NULL, '$nombre', '$apellido', '$correo_electronico', $telefono, '$edad', '$lugar_de_nacimiento', '$fecha_de_nacimiento', '$foto_perfil' )";
+
 return mysqli_query($this->conn, $guardar_datos);
 
 

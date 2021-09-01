@@ -5,13 +5,13 @@
     include_once('Usuario.php'); //Llamamos al archivo Usuario.php
 
     
-    
+    $seGuardo = false;
     if ( isset($_POST) && !empty($_POST) ){
        $nuevo_usuario = new Usuario(); 
        $nuevo_usuario->crear_usuario($_POST);
 
        if ($nuevo_usuario){
-           echo "Muy bien, usuario guardado";
+            $seGuardo = true;
        }
     }
 
@@ -33,16 +33,20 @@
 </head>
 
 <body>
-<?php
+    <?php
         include('../menu.php');
+        if ( $seGuardo == true ){
+            echo "Muy bien, usuario guardado";
+        }
     ?>
 
     <div class="container">
-        <h1 class="text-center mt-5 titulo_principal" >Agregar nuevo usuario</h1>
-        <form method="POST" enctype="multipart/form-data" >
+        <h1 class="text-center mt-5 titulo_principal">Agregar nuevo usuario</h1>
+        <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" require="true">
+                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp"
+                    require="true">
             </div>
 
             <div class="mb-3">
@@ -52,12 +56,14 @@
 
             <div class="mb-3">
                 <label for="correo_electronico" class="form-label">Correo electronico</label>
-                <input type="text" class="form-control" id="correo_electronico" name="correo_electronico" require="true">
+                <input type="text" class="form-control" id="correo_electronico" name="correo_electronico"
+                    require="true">
             </div>
 
             <div class="mb-3">
                 <label for="contrasena" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" aria-describedby="emailHelp">
+                <input type="password" class="form-control" id="contrasena" name="contrasena"
+                    aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
@@ -66,7 +72,7 @@
             </div>
 
             <div class="mb-3">
-                <select class="form-select" aria-label="Default select example" id="rol" name="rol" >
+                <select class="form-select" aria-label="Default select example" id="rol" name="rol">
                     <option selected>Seleccione un rol</option>
                     <option value="Administrativo">Administrativo</option>
                     <option value="Profesor">Profesor</option>
@@ -74,7 +80,9 @@
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <div class="text-center m-5">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
         </form>
     </div>
 

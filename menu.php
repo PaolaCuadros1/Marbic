@@ -55,6 +55,26 @@
                         <li><a class="dropdown-item" href="<?= ROOT ?>/Comentarios/ver.php">Ver salones</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="salones" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Materias
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="salones">
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/Materias/agregar.php">Registro</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/Materias/ver.php">Ver materias</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="salones" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Clubes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="salones">
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/clubes/agregar.php">Registro</a></li>
+                        <li><a class="dropdown-item" href="<?= ROOT ?>/clubes/ver.php">Ver materias</a></li>
+                    </ul>
+                </li>
 
             </ul>
         </div>

@@ -3,13 +3,13 @@
 include_once('../config/config.php');
 include_once('salones.php'); //llamamos al archivo
 
-
+$seGuardo = false;
 if ( isset($_POST) && !empty($_POST) ){
     $nuevo_elemento = new salones (); 
     $nuevo_elemento->crear_elemento($_POST);
 
     if ($nuevo_elemento){
-        echo "Muy bien, elemento guardado";
+        $seGuardo = true;
     }
  }
 
@@ -32,6 +32,9 @@ if ( isset($_POST) && !empty($_POST) ){
 <body>
     <?php
       include('../menu.php');
+      if ( $seGuardo == true ){
+        echo "Muy bien, salón guardado";
+       }
     ?>
     <div class="container">
         <h1 class="text-center mt-5">Agregar salón nuevo</h1>
@@ -63,50 +66,53 @@ if ( isset($_POST) && !empty($_POST) ){
                 <label for="numero_televisor" class="form-label">numero televisor</label>
                 <input type="text" class="form-control" id="numero_televisor" name="numero_televisor"
                     aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+
+                <div class="mb-3">
+                    <label for="numero_puerta_corrediza" class="form-label">numero puerta corrediza</label>
+                    <input type="text" class="form-control" id="numero_puerta_corrediza" name="numero_puerta_corrediza"
+                        aria-describedby="emailHelp">
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="numero_microscopio" class="form-label">numero microscopio</label>
+                    <input type="text" class="form-control" id="numero_microscopio" name="numero_microscopio"
+                        aria-describedby="emailHelp">
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="numero_antibacterial" class="form-label">numero
+                        antibacterial</label>
+                    <input type="text" class="form-control" id="numero_antibacterial" name="numero_antibacterial"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="numero_alcohol" class="form-label">numero alcohol</label>
+                    <input type="text" class="form-control" id="numero_alcohol" name="numero_alcohol"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="numero_toallas	" class="form-label">numero toallas
+                    </label>
+                    <input type="text" class="form-control" id="numero_toallas" name="numero_toallas"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="numero_balones" class="form-label">numero
+                        balones </label>
+                    <input type="text" class="form-control" id="numero_balones" name="numero_balones"
+                        aria-describedby="emailHelp">
+                </div>
                 <div class="mb-3">
 
-                    <div class="mb-3">
-                        <label for="numero_puerta_corrediza" class="form-label">numero puerta corrediza</label>
-                        <input type="text" class="form-control" id="numero_puerta_corrediza"
-                            name="numero_puerta_corrediza" aria-describedby="emailHelp">
-                        <div class="mb-3">
-
-                            <div class="mb-3">
-                                <label for="numero_microscopio" class="form-label">numero microscopio</label>
-                                <input type="text" class="form-control" id="numero_microscopio"
-                                    name="numero_microscopio" aria-describedby="emailHelp">
-                                <div class="mb-3">
-
-                                    <div class="mb-3">
-                                        <label for="numero_antibacterial" class="form-label">numero
-                                            antibacterial</label>
-                                        <input type="text" class="form-control" id="numero_antibacterial"
-                                            name="numero_antibacterial" aria-describedby="emailHelp">
-                                        <div class="mb-3">
-
-                                            <div class="mb-3">
-                                                <label for="numero_alcohol" class="form-label">numero alcohol</label>
-                                                <input type="text" class="form-control" id="numero_alcohol"
-                                                    name="numero_alcohol" aria-describedby="emailHelp">
-                                                <div class="mb-3">
-
-                                                    <div class="mb-3">
-                                                        <label for="numero_toallas	" class="form-label">numero toallas
-                                                        </label>
-                                                        <input type="text" class="form-control" id="numero_toallas"
-                                                            name="numero_toallas" aria-describedby="emailHelp">
-                                                        <div class="mb-3">
-
-                                                            <div class="mb-3">
-                                                                <label for="numero_balones" class="form-label">numero
-                                                                    balones </label>
-                                                                <input type="text" class="form-control"
-                                                                    id="numero_balones" name="numero_balones"
-                                                                    aria-describedby="emailHelp">
-                                                                <div class="mb-3">
-
-                                                                    <button type="submit"
-                                                                        class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"

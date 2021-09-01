@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-  public $host = 'localhost'; // Servidor
-  public $user = 'root'; // Usuario de phpMyadmin
-  public $pass = '';  // Contraseña de phpMyadmin
-  public $db = 'marbic'; // Base de datos.
+  public $host = 'remotemysql.com'; // Servidor
+  public $user = 'l96lOKJUsF'; // Usuario de phpMyadmin
+  public $pass = 'Xx7jBTVtcb';  // Contraseña de phpMyadmin
+  public $db = 'l96lOKJUsF'; // Base de datos.
   private $conn;
 
   /**

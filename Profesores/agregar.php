@@ -2,13 +2,13 @@
 
 include_once('../Config/config.php');
 include_once('profesores.php');
-
+$seGuardo == false;
 if ( isset($_POST) && !empty($_POST) ){
     $nuevo_profesor = new profesores(); 
     $nuevo_profesor->crear_profesor($_POST);
 
 if ($nuevo_profesor){
-        echo "Muy bien, usuario guardado";
+    $seGuardo == true;
     }
  }
 
@@ -30,6 +30,9 @@ if ($nuevo_profesor){
 <body>
     <?php
     include('../menu.php');
+    if ( $seGuardo == true ){
+        echo "Muy bien, profesor guardado";
+       }
 ?>
     <div class="container">
         <h1 class="text-center mt-5">Agregar nuevo profesor</h1>
@@ -74,7 +77,10 @@ if ($nuevo_profesor){
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mb-3">
+
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
